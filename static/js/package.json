@@ -1,0 +1,26 @@
+{
+  "name": "taiji",
+  "version": "1.0.0",
+  "description": "wit",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Leo Lin",
+  "license": "ISC",
+  "dependencies": {
+    "babel-loader": "^6.4.1",
+    "babel-polyfill": "^6.20.0",
+    "jquery": "^3.1.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^1.14.0"
+  }
+}
