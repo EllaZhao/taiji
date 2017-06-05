@@ -8,12 +8,45 @@
     border-bottom: 1px solid #eee;
 }
 
+#root {
+    height: 100%;
+}
+
 /*
  * Top navigation
  * Hide default border to remove 1px line.
  */
 .navbar-fixed-top {
     border: 0;
+}
+
+.cell {
+    padding: 15px;
+    border-bottom: 1px solid rgb(216, 216, 216);
+    position: relative;
+}
+
+.cell-sublabel {
+    padding-top: 5px;
+    font-size: 4px;
+    color: rgb(153, 153, 153);
+}
+
+.search {
+    margin-top: 10px
+}
+
+body,html,.infoPanel {
+    height: 100%;
+}
+
+.content {
+    overflow: hidden;
+    height: calc(100% - 45px);
+}
+
+.tabbar {
+    height: 45px;
 }
 
 /*
