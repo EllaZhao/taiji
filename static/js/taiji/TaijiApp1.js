@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux'
 
 import ListView from "../list/ListView.js"
 import SearchView from "./SearchView.js"
@@ -19,10 +20,12 @@ export default class TaijiApp extends React.Component {
     }
 
     render() {
-        if (this.state.lastPage == "SearchView") {
-            return (<SearchView itemClick={this.onItemClick} nav={this}/>)
-        }else{
-            return (<CompanyInfo/>)
-        }
+        return (<Provider store={store}>
+                    if (this.state.lastPage == "SearchView") {
+                        <SearchView itemClick={this.onItemClick} nav={this}/>
+                    }else{
+                        <CompanyInfo/>
+                    }
+                </Provider>)
     }
 }

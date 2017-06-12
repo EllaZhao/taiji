@@ -40,6 +40,21 @@ body,html,.infoPanel {
     height: 100%;
 }
 
+.infoPanel {
+    padding-top: 5px;
+}
+
+.infoPanel-item {
+    padding-top: 10px;
+}
+
+.infoPanel-field {
+    height: 45px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid rgb(216, 216, 216);
+}
+
 .content {
     overflow: hidden;
     height: calc(100% - 45px);
@@ -47,6 +62,14 @@ body,html,.infoPanel {
 
 .tabbar {
     height: 45px;
+}
+
+.tabbar-favorite {
+    text-align: center;
+}
+
+.tabbar-close {
+    text-align: right;
 }
 
 /*
