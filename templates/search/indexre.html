@@ -35,18 +35,6 @@
         <div class="form-group"><input class="form-control" id="searchText" placeholder="公司名称" type="text"></div>
     </form>
     <div class="row" id="list">
-        <div class="cell">
-            <div>小米科技有限责任公司</div>
-            <div class="cell-sublabel">成立于 2013年4月21日</div>
-        </div>
-        <div class="cell">
-            <div>小米科技有限责任公司</div>
-            <div class="cell-sublabel">成立于 2013年4月21日</div>
-        </div>
-        <div class="cell">
-            <div>小米科技有限责任公司</div>
-            <div class="cell-sublabel">成立于 2013年4月21日</div>
-        </div>
     </div>
 </div>
 
@@ -56,16 +44,10 @@
 
 <script type="application/javascript" src="{% static 'js/jq/jquery-3.1.1.js' %}"></script>
 <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
-<!--<script src="{% static 'js/search/search.js' %}"></script>-->
+<script src="{% static 'js/search/search.js' %}"></script>
 <script type="application/javascript">
-    //$(".cell").bind("click", openSearchPage);
 
-    $.getJSON("search/天", function(result){
-        console.log(result);
-    });
-    var cellLabel = $("<div>小米</div>"),
-    cellLabel2 = $("<div>成立于 2013年4月21日</div>");
-    $("#list").append($("<div class=\"cell\"></div>").append([cellLabel, cellLabel2]));
+    searchByText("天");
 
 </script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
