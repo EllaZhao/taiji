@@ -31,11 +31,33 @@
 <body>
 
 <div class="infoPanel">
-    <div class="content">content</div>
+    <div class="content container-fluid">
+        <div class="row">
+            <div id="title" class="col-xs-12 infoPanel-item"></div>
+            <div id="summary" class="col-xs-12 infoPanel-item"></div>
+        </div>
+        <div class="row infoPanel-field">
+            <div class="col-xs-4">电话：</div>
+            <div id="phone" class="col-xs-8"></div>
+        </div>
+        <div class="row infoPanel-field">
+            <div class="col-xs-4">email：</div>
+            <div id="email" class="col-xs-8"></div>
+        </div>
+        <div class="row infoPanel-field">
+            <div class="col-xs-4">成立时间：</div>
+            <div id="registerFundTime" class="col-xs-8"></div>
+        </div>
+        <div class="row infoPanel-field">
+            <div class="col-xs-4">注册资金：</div>
+            <div id="fund" class="col-xs-8"></div>
+        </div>
+    </div>
     <div class="tabbar container-fluid">
         <div class="row">
-            <div class="col-xs-4">收藏</div>
-            <div class="col-xs-6">关闭</div>
+            <div class="col-xs-4 tabbar-favorite">收藏</div>
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4">关闭</div>
         </div>
     </div>
 </div>
@@ -48,7 +70,15 @@
 <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/search/search.js' %}"></script>
 <script type="application/javascript">
-
+    getCompanyDetail("{{companyId}}", function(e){
+        console.log(e);
+        $("#title").append(e.hits.hits[0]._source.name);
+        $("#summary").append(e.hits.hits[0]._source.businessScope);
+        $("#phone").append(e.hits.hits[0]._source.phone);
+        $("#email").append(e.hits.hits[0]._source.email);
+        $("#registerFundTime").append(e.hits.hits[0]._source.registerFundTime);
+        $("#fund").append(e.hits.hits[0]._source.fund);
+    });
 </script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 </body>
