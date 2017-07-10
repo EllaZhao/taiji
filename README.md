@@ -1,5 +1,15 @@
 # taiji
 
+搜索接口
+
+http://server:8000/search/query/<content>
+
+
+
+
+公司详情接口
+
+http://server:8000/search/company/info/<company_id>
 <pre><code>
 
 {
@@ -26,3 +36,15 @@
   }
 
 </code></pre>
+
+
+评星接口
+
+http://server:8000/cp/rate_company/1/rate/5
+
+
+订阅公司接口
+
+http://server:8000/cp/order_company/<company_id>/user/<user_id>
+
+
