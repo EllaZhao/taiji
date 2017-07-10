@@ -27,3 +27,4 @@ function getCompanyDetail(companyId, callback) {
     console.log("get by companyId"+ companyId);
     $.getJSON("/search/company/info/" + companyId, callback);
 }
+
